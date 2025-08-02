@@ -1,1 +1,268 @@
-<!DOCTYPE html> <html lang="ar" dir="rtl"> <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!-- === بيانات العنوان والمشاركة على وسائل التواصل الاجتماعي === -->     <title>صيفك سعيد مع البريد</title>     <meta property="og:title" content="صيفك سعيد مع البريد">     <meta property="og:description" content="حدد موقع سيارة البريد المتنقلة الأقرب إليك في الساحل الشمالي واستمتع بخدماتنا.">     <meta property="og:image" content="https://placehold.co/600x315/00965E/FFFFFF?text=البريد+المصري">      <!-- Tailwind CSS للتصميم السريع والمرن -->     <script src="https://cdn.tailwindcss.com"></script>     <!-- خطوط جوجل: Cairo للغة العربية -->     <link rel="preconnect" href="https://fonts.googleapis.com">     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">          <style>         /* === الخطوط والخلفيات المخصصة === */         body {             font-family: 'Cairo', sans-serif;             position: relative;         }                  /* --- الطبقة الخلفية (صورة ثابتة) --- */         #background-image {             position: fixed;             top: 0;             left: 0;             width: 100%;             height: 100%;             z-index: -3; /* طبقة خلفية أعمق */             overflow: hidden;             pointer-events: none;             background-image: url('https://i.ibb.co/6c7B5tPh/background-16-9-rectangle.jpg');             background-size: cover;             background-position: center;             opacity: 0.7; /* شفافية صورة الخلفية نفسها */             filter: blur(2px); /* لتطبيق تأثير الضبابية */         }                  /* --- الطبقة الوسطى (الخلفية الخضراء الشفافة) --- */         #green-overlay {             position: fixed;             top: 0;             left: 0;             width: 100%;             height: 100%;             z-index: -2; /* طبقة وسطى بين الصورة والفورم */             background-color: rgba(0, 150, 94, 0.5); /* الأخضر #00965E بنسبة شفافية 50% */             backdrop-filter: blur(2px); /* إضافة تأثير ضبابي خفيف للتناسق */             -webkit-backdrop-filter: blur(2px);         }          /* تعديل مظهر القائمة المنسدلة */         select {             appearance: none;             -webkit-appearance: none;             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%238ec641'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");             background-repeat: no-repeat;             background-position: left 0.5rem center;             background-size: 1.5rem;             padding-left: 2.5rem;         }          /* === الألوان المخصصة لـ Tailwind === */         .custom-green-bg { background-color: #00965E; }         .custom-green-text { color: #00965E; }         .custom-green-bg-hover:hover { background-color: #007f50; }         .custom-green-border { border-color: #00965E; }         .custom-green-ring:focus { --tw-ring-color: #00965E; }         .custom-green-light-bg { background-color: #e6f5ef; }         .custom-green-light-text { color: #005a38; }         .custom-light-green-text { color: #8ec641; }                  /* --- الطبقة الأولى: الفورم (البيضاء الشفافة) --- */         .overlay {             background-color: rgba(255, 255, 255, 0.8);             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);         }         .overlay img {             opacity: 1;          }          /* === تصميم الفوتر === */         footer a {             color: #FFFFFF;             font-weight: bold;             text-decoration: none;         }         footer a:hover {             text-decoration: underline;         }         .text-shadow {             text-shadow: 0 1px 3px rgba(0,0,0,0.6);         }                  /* === تصميم شاشة الترحيب === */         .splash-screen {             position: fixed;             top: 0;             left: 0;             width: 100%;             height: 100%;             display: flex;             flex-direction: column;             align-items: center;             justify-content: center;             z-index: 100;             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;             background-color: #FFFFFF;         }          .splash-screen img {             transition: opacity 1s ease-in-out, transform 1s ease-in-out;         }          /* إضافة تأثير الفلاش (فلاش ترحيبي) */         .flash-animation {             opacity: 0;             transform: scale(0.5);             animation: flash-in 1.5s forwards;         }          @keyframes flash-in {             0% {                 opacity: 0;                 transform: scale(0.5);             }             100% {                 opacity: 1;                 transform: scale(1);             }         }     </style> </head> <body class="flex items-center justify-center min-h-screen custom-green-bg">      <!-- === شاشة الترحيب === -->     <div id="welcome-splash" class="splash-screen">         <img src="https://i.ibb.co/fznN8Fq1/slogan-01.png" alt="slogan" class="w-80 h-auto flash-animation">     </div>      <!-- === الطبقة الخلفية (صورة ثابتة) === -->     <div id="background-image"></div>          <!-- === الطبقة الوسطى (الخلفية الخضراء) === -->     <div id="green-overlay"></div>      <!-- المحتوى الرئيسي للصفحة -->     <div class="w-full max-w-sm mx-auto bg-transparent p-4" style="z-index: 1;">         <div class="overlay rounded-2xl p-6">                          <!-- قسم الترويسة مع الشعار -->             <div class="text-center mb-4">                 <div class="w-64 mx-auto mb-3">                     <img src="https://i.ibb.co/fznN8Fq1/slogan-01.png" alt="slogan" class="w-full h-auto">                 </div>                                  <p class="custom-green-text font-semibold text-lg mt-4">حدد موقع سيارة البريد المتنقلة الأقرب إليك في الساحل الشمالي.</p>             </div>                          <!-- قائمة الاختيار المنسدلة -->             <div class="mb-6">                 <label for="location-selector" class="block text-sm font-bold custom-light-green-text mb-2">اختر سيارة البريد المتنقلة:</label>                 <select id="location-selector" class="w-full p-2 border border-gray-300 rounded-lg bg-white text-custom-green-text focus:ring-2 custom-green-ring focus:border-transparent transition text-sm shadow-md focus:shadow-lg">                     <option value="">-- اختر من القائمة --</option>                 </select>             </div>              <!-- منطقة عرض النتائج -->             <div id="result-container" aria-live="polite" class="custom-green-light-bg border-r-4 custom-green-border p-5 rounded-lg transition-all duration-500 hidden">                 <h2 id="location-name" class="text-xl font-bold custom-green-text mb-3"></h2>                 <div class="space-y-2 text-sm text-gray-700">                     <p id="location-status" class="flex items-center"><span class="w-2 h-2 ml-2 rounded-full" id="status-dot"></span></p>                     <p id="location-services"></p>                 </div>                 <a id="maps-link" href="#" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center w-full custom-green-bg text-white font-bold py-3 px-4 rounded-lg custom-green-bg-hover transition-colors duration-300 shadow-md text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 custom-green-ring">                     <svg class="w-6 h-6 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>                     </svg>                     افتح على خرائط جوجل                 </a>             </div>         </div>     </div>          <!-- الفوتر -->     <footer class="fixed bottom-0 left-0 right-0 w-full text-center p-4 text-white z-10">         <p id="copyright-line" class="text-xs text-shadow mb-1"></p>         <p class="text-[11px] text-shadow">الإدارة العامة للاتصالات التسويقية</p>     </footer>      <script>         // --- البيانات الخاصة بمواقع السيارات مع إضافة خطوط الطول والعرض والخدمات والحالة ---         const locations = [             { name: "متنقل 1: بجوار سوق ليبيا", lat: 31.2588, lng: 28.9135, mapsUrl: "https://maps.app.goo.gl/3fY7pGDxRn8Qw5Sg7", status: "متاح الآن", services: ["خدمات مالية", "طرود بريدية"] },             { name: "متنقل 2: بجوار موقف أتوبيس غرب الدلتا", lat: 31.2291, lng: 28.9320, mapsUrl: "https://maps.app.goo.gl/cqJDDjQN8HBQ317L6", status: "مشغول", services: ["خدمات مالية", "صرف معاشات"] },             { name: "متنقل 3: أمام مجلس مدينة العلمين", lat: 30.8291, lng: 28.9366, mapsUrl: "https://maps.app.goo.gl/FZwNfKbYxfjrvxJV7", status: "متاح الآن", services: ["طرود بريدية", "خدمات حكومية"] },             { name: "متنقل 4: أمام قرية أمواج السياحية", lat: 31.0667, lng: 28.5333, mapsUrl: "https://maps.app.goo.gl/vgshn3Y4BA8RQ43VA", status: "متاح الآن", services: ["خدمات مالية"] },             { name: "متنقل 5: أمام المركز الطبي بسيدي عبدالرحمن", lat: 30.9333, lng: 28.6667, mapsUrl: "https://maps.app.goo.gl/M4RF933NzghjWBJL7", status: "مشغول", services: ["صرف معاشات"] },             { name: "متنقل 6: برأس الحكمة بجوار بنزينة التعاون", lat: 31.1400, lng: 27.6000, mapsUrl: "https://maps.app.goo.gl/GtnkyX82QPskumcz9?g_st=ipc", status: "متاح الآن", services: ["خدمات مالية", "طرود بريدية", "صرف معاشات"] }         ];                  // --- الكود المسؤول عن تشغيل الصفحة ---         document.addEventListener('DOMContentLoaded', () => {             const selector = document.getElementById('location-selector');             const resultContainer = document.getElementById('result-container');             const locationName = document.getElementById('location-name');             const locationStatus = document.getElementById('location-status');             const statusDot = document.getElementById('status-dot');             const locationServices = document.getElementById('location-services');             const mapsLink = document.getElementById('maps-link');             const welcomeSplash = document.getElementById('welcome-splash');                          // ملء القائمة المنسدلة             if (selector) {                 locations.forEach((location, index) => {                     const option = document.createElement('option');                     option.value = index;                     option.textContent = location.name;                     selector.appendChild(option);                 });                  // إضافة مستمع الأحداث للقائمة                 selector.addEventListener('change', (event) => {                     const selectedIndex = event.target.value;                     if (selectedIndex === "") {                         resultContainer.classList.add('hidden');                     } else {                         const selectedLocation = locations[selectedIndex];                                                  locationName.textContent = selectedLocation.name;                                                  // تحديث الحالة                         locationStatus.innerHTML = `<span class="w-2 h-2 ml-2 rounded-full ${selectedLocation.status === 'متاح الآن' ? 'bg-green-500' : 'bg-yellow-500'}"></span> الحالة: ${selectedLocation.status}`;                                                  // تحديث الخدمات                         locationServices.textContent = `الخدمات: ${selectedLocation.services.join(', ')}`;                                                  mapsLink.href = selectedLocation.mapsUrl;                         resultContainer.classList.remove('hidden');                     }                 });             }                          // --- حقوق الملكية في الفوتر ---             const year = new Date().getFullYear();             const copyrightLine = document.getElementById('copyright-line');             if (copyrightLine) {                 copyrightLine.innerHTML = `© ${year} جميع الحقوق محفوظة لدى <a href="https://egyptpost.org/" target="_blank" rel="noopener noreferrer">البريد المصري</a>`;             }              // إخفاء شاشة الترحيب بعد ثانيتين             setTimeout(() => {                 if (welcomeSplash) {                     welcomeSplash.style.opacity = '0';                     setTimeout(() => {                         welcomeSplash.style.display = 'none';                     }, 500);                 }             }, 2000);         });     </script> </body> </html> 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === بيانات العنوان والمشاركة على وسائل التواصل الاجتماعي === -->
+    <title>صيفك سعيد مع البريد</title>
+    <meta property="og:title" content="صيفك سعيد مع البريد">
+    <meta property="og:description" content="حدد موقع سيارة البريد المتنقلة الأقرب إليك في الساحل الشمالي واستمتع بخدماتنا.">
+    <meta property="og:image" content="https://placehold.co/600x315/00965E/FFFFFF?text=البريد+المصري">
+
+    <!-- Tailwind CSS للتصميم السريع والمرن -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- خطوط جوجل: Cairo للغة العربية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === الخطوط والخلفيات المخصصة === */
+        body {
+            font-family: 'Cairo', sans-serif;
+            position: relative;
+        }
+        
+        /* --- الطبقة الخلفية (صورة ثابتة) --- */
+        #background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3; /* طبقة خلفية أعمق */
+            overflow: hidden;
+            pointer-events: none;
+            /* تم إعادة الرابط الخارجي الأصلي */
+            background-image: url('https://i.ibb.co/6c7B5tPh/background-16-9-rectangle.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7; /* شفافية صورة الخلفية نفسها */
+            filter: blur(2px); /* لتطبيق تأثير الضبابية */
+        }
+        
+        /* --- الطبقة الوسطى (الخلفية الخضراء الشفافة) --- */
+        #green-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2; /* طبقة وسطى بين الصورة والفورم */
+            background-color: rgba(0, 150, 94, 0.5); /* الأخضر #00965E بنسبة شفافية 50% */
+            backdrop-filter: blur(2px); /* إضافة تأثير ضبابي خفيف للتناسق */
+            -webkit-backdrop-filter: blur(2px);
+        }
+
+        /* تعديل مظهر القائمة المنسدلة */
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%238ec641'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 0.5rem center;
+            background-size: 1.5rem;
+            padding-left: 2.5rem;
+        }
+
+        /* === الألوان المخصصة لـ Tailwind === */
+        .custom-green-bg { background-color: #00965E; }
+        .custom-green-text { color: #00965E; }
+        .custom-green-bg-hover:hover { background-color: #007f50; }
+        .custom-green-border { border-color: #00965E; }
+        .custom-green-ring:focus { --tw-ring-color: #00965E; }
+        .custom-green-light-bg { background-color: #e6f5ef; }
+        .custom-green-light-text { color: #005a38; }
+        .custom-light-green-text { color: #8ec641; }
+        
+        /* --- الطبقة الأولى: الفورم (البيضاء الشفافة) --- */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+        }
+        .overlay img {
+            opacity: 1; 
+        }
+
+        /* === تصميم الفوتر === */
+        footer a {
+            color: #FFFFFF;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .text-shadow {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+        
+        /* === تصميم شاشة الترحيب === */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            background-color: #FFFFFF;
+        }
+
+        .splash-screen img {
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        /* إضافة تأثير الفلاش (فلاش ترحيبي) */
+        .flash-animation {
+            opacity: 0;
+            transform: scale(0.5);
+            animation: flash-in 1.5s forwards;
+        }
+
+        @keyframes flash-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen custom-green-bg">
+
+    <!-- === شاشة الترحيب === -->
+    <div id="welcome-splash" class="splash-screen">
+        <img src="https://i.ibb.co/fznN8Fq1/slogan-01.png" alt="slogan" class="w-80 h-auto flash-animation">
+    </div>
+
+    <!-- === الطبقة الخلفية (صورة ثابتة) === -->
+    <div id="background-image"></div>
+    
+    <!-- === الطبقة الوسطى (الخلفية الخضراء) === -->
+    <div id="green-overlay"></div>
+
+    <!-- المحتوى الرئيسي للصفحة -->
+    <div class="w-full max-w-sm mx-auto bg-transparent p-4" style="z-index: 1;">
+        <div class="overlay rounded-2xl p-6">
+            
+            <!-- قسم الترويسة مع الشعار -->
+            <div class="text-center mb-4">
+                <div class="w-64 mx-auto mb-3">
+                    <img src="https://i.ibb.co/fznN8Fq1/slogan-01.png" alt="slogan" class="w-full h-auto">
+                </div>
+                
+                <p class="custom-green-text font-semibold text-lg mt-4">حدد موقع سيارة البريد المتنقلة الأقرب إليك في الساحل الشمالي.</p>
+            </div>
+            
+            <!-- قائمة الاختيار المنسدلة -->
+            <div class="mb-6">
+                <label for="location-selector" class="block text-sm font-bold custom-light-green-text mb-2">اختر سيارة البريد المتنقلة:</label>
+                <select id="location-selector" class="w-full p-2 border border-gray-300 rounded-lg bg-white text-custom-green-text focus:ring-2 custom-green-ring focus:border-transparent transition text-sm shadow-md focus:shadow-lg">
+                    <option value="">-- اختر من القائمة --</option>
+                </select>
+            </div>
+
+            <!-- منطقة عرض النتائج -->
+            <div id="result-container" aria-live="polite" class="custom-green-light-bg border-r-4 custom-green-border p-5 rounded-lg transition-all duration-500 hidden">
+                <h2 id="location-name" class="text-xl font-bold custom-green-text mb-3"></h2>
+                <div class="space-y-2 text-sm text-gray-700">
+                    <p id="location-status" class="flex items-center"><span class="w-2 h-2 ml-2 rounded-full" id="status-dot"></span></p>
+                    <p id="location-services"></p>
+                </div>
+                <a id="maps-link" href="#" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center w-full custom-green-bg text-white font-bold py-3 px-4 rounded-lg custom-green-bg-hover transition-colors duration-300 shadow-md text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 custom-green-ring">
+                    <svg class="w-6 h-6 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    افتح على خرائط جوجل
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- الفوتر -->
+    <footer class="fixed bottom-0 left-0 right-0 w-full text-center p-4 text-white z-10">
+        <p id="copyright-line" class="text-xs text-shadow mb-1"></p>
+        <p class="text-[11px] text-shadow">الإدارة العامة للاتصالات التسويقية</p>
+    </footer>
+
+    <script>
+        // --- البيانات الخاصة بمواقع السيارات مع إضافة خطوط الطول والعرض والخدمات والحالة ---
+        const locations = [
+            { name: "متنقل 1: بجوار سوق ليبيا", lat: 31.2588, lng: 28.9135, mapsUrl: "https://maps.app.goo.gl/3fY7pGDxRn8Qw5Sg7", status: "متاح الآن", services: ["خدمات مالية", "طرود بريدية"] },
+            { name: "متنقل 2: بجوار موقف أتوبيس غرب الدلتا", lat: 31.2291, lng: 28.9320, mapsUrl: "https://maps.app.goo.gl/cqJDDjQN8HBQ317L6", status: "مشغول", services: ["خدمات مالية", "صرف معاشات"] },
+            { name: "متنقل 3: أمام مجلس مدينة العلمين", lat: 30.8291, lng: 28.9366, mapsUrl: "https://maps.app.goo.gl/FZwNfKbYxfjrvxJV7", status: "متاح الآن", services: ["طرود بريدية", "خدمات حكومية"] },
+            { name: "متنقل 4: أمام قرية أمواج السياحية", lat: 31.0667, lng: 28.5333, mapsUrl: "https://maps.app.goo.gl/vgshn3Y4BA8RQ43VA", status: "متاح الآن", services: ["خدمات مالية"] },
+            { name: "متنقل 5: أمام المركز الطبي بسيدي عبدالرحمن", lat: 30.9333, lng: 28.6667, mapsUrl: "https://maps.app.goo.gl/M4RF933NzghjWBJL7", status: "مشغول", services: ["صرف معاشات"] },
+            { name: "متنقل 6: برأس الحكمة بجوار بنزينة التعاون", lat: 31.1400, lng: 27.6000, mapsUrl: "https://maps.app.goo.gl/GtnkyX82QPskumcz9?g_st=ipc", status: "متاح الآن", services: ["خدمات مالية", "طرود بريدية", "صرف معاشات"] }
+        ];
+        
+        // --- الكود المسؤول عن تشغيل الصفحة ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const selector = document.getElementById('location-selector');
+            const resultContainer = document.getElementById('result-container');
+            const locationName = document.getElementById('location-name');
+            const locationStatus = document.getElementById('location-status');
+            const statusDot = document.getElementById('status-dot');
+            const locationServices = document.getElementById('location-services');
+            const mapsLink = document.getElementById('maps-link');
+            const welcomeSplash = document.getElementById('welcome-splash');
+            
+            // ملء القائمة المنسدلة
+            if (selector) {
+                locations.forEach((location, index) => {
+                    const option = document.createElement('option');
+                    option.value = index;
+                    option.textContent = location.name;
+                    selector.appendChild(option);
+                });
+
+                // إضافة مستمع الأحداث للقائمة
+                selector.addEventListener('change', (event) => {
+                    const selectedIndex = event.target.value;
+                    if (selectedIndex === "") {
+                        resultContainer.classList.add('hidden');
+                    } else {
+                        const selectedLocation = locations[selectedIndex];
+                        
+                        locationName.textContent = selectedLocation.name;
+                        
+                        // تحديث الحالة
+                        locationStatus.innerHTML = `<span class="w-2 h-2 ml-2 rounded-full ${selectedLocation.status === 'متاح الآن' ? 'bg-green-500' : 'bg-yellow-500'}"></span> الحالة: ${selectedLocation.status}`;
+                        
+                        // تحديث الخدمات
+                        locationServices.textContent = `الخدمات: ${selectedLocation.services.join(', ')}`;
+                        
+                        mapsLink.href = selectedLocation.mapsUrl;
+                        resultContainer.classList.remove('hidden');
+                    }
+                });
+            }
+            
+            // --- حقوق الملكية في الفوتر ---
+            const year = new Date().getFullYear();
+            const copyrightLine = document.getElementById('copyright-line');
+            if (copyrightLine) {
+                copyrightLine.innerHTML = `© ${year} جميع الحقوق محفوظة لدى <a href="https://egyptpost.org/" target="_blank" rel="noopener noreferrer">البريد المصري</a>`;
+            }
+
+            // إخفاء شاشة الترحيب بعد ثانيتين
+            setTimeout(() => {
+                if (welcomeSplash) {
+                    welcomeSplash.style.opacity = '0';
+                    setTimeout(() => {
+                        welcomeSplash.style.display = 'none';
+                    }, 500);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
